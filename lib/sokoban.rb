@@ -1,9 +1,10 @@
 # frozen_string_literal: true
+
 require_relative 'config'
 
 def init_board(lvl, worker_pos)
   board_arr = Array.new(LEVELS[lvl].length) { [] }
-  (0...LEVELS.length).to_a.each_index do |i|
+  (0...LEVELS[lvl].length).to_a.each_index do |i|
     column_num = LEVELS[lvl][i].length
     (0...column_num).to_a.each_index do |j|
       board_arr[i][j] = LEVELS[lvl][i][j]
@@ -51,5 +52,5 @@ def print_board(board)
   puts ''
 end
 
-print_board(init_board(0, Array.new(2)))
+print_board(init_board(1, Array.new(2)))
 # print_board([[], []])
