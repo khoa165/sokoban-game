@@ -17,6 +17,7 @@ def init_board(lvl, worker_pos)
 
   (0...GOALS[lvl].length).to_a.each_index do |i|
     next if i.odd?
+
     goal_rows = GOALS[lvl][i]
     goal_columns = GOALS[lvl][i + 1]
     if board_arr[goal_rows][goal_columns] == WORKER_CHAR
